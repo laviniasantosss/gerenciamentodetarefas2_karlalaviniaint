@@ -1,0 +1,142 @@
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #7e22ce, #a855f7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.container h1 {
+  text-align: center;
+  color: #6b21a8;
+  font-size: 2rem;
+}
+
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 100;
+  color: #6b21a8;
+  
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #ffffff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.task-form button {
+  background: #7e22ce;
+  color: #000000;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #5b21b6;
+}
+
+
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #9682bb;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #6b21a8;
+  margin-bottom: 5px;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button.edit {
+  background: #9333ea;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.delete {
+  background: #e11d48;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 95%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .task-list {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .task-form button {
+    font-size: 0.9rem;
+  }
+}
